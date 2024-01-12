@@ -51,19 +51,17 @@ body {
     border-radius: 10px;
 }
 
-.middle .plan:first-of-type {
+.middle .plan:hover {
     background-color: #eaedfa;
+}
+
+.middle .plan:first-of-type {
     margin-bottom: .5rem;
 }
 
 .middle .btn {
     padding: .4rem 1rem;
     border-radius: 10px;
-}
-
-.middle .plan:first-of-type .btn {
-    background: linear-gradient(to right, #f8937d, #fe9a36);
-    color: #fff;
 }
 
 .chart {
@@ -161,6 +159,11 @@ body {
     border-radius: 15px;
     font-weight: 600;
     background-color: #fff;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #f8937d, #fe9a36);
+    color: #fff;
 }
 
 .main {
