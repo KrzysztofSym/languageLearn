@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #161c3f 30%, #1f264f 30% 70%, #161c3f 70% 100%);
+    font-size: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: 80vh;
+    position: relative;
+}
+
+.middle {
+    position: absolute;
+    top: 3rem;
+    width: 250px;
+    font-size: .7rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    z-index: 2;
+}
+
+.middle h1 {
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.middle h2 {
+    font-size: .8rem;
+}
+
+.middle .plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+.middle .plan:first-of-type {
+    background-color: #eaedfa;
+    margin-bottom: .5rem;
+}
+
+.middle .btn {
+    padding: .4rem 1rem;
+    border-radius: 10px;
+}
+
+.middle .plan:first-of-type .btn {
+    background: linear-gradient(to right, #f8937d, #fe9a36);
+    color: #fff;
+}
+
+.chart {
+    position: absolute;
+    bottom: 0;
+    left: 7rem;
+    width: 170px;
+    border-radius: 10px;
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    font-size: .8rem;
+    z-index: 2;
+}
+
+.chart .percent {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.chart .percent svg {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.chart .percent svg circle {
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke-width: 5;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    stroke-linecap: round;
+}
+
+.chart .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.chart .percent svg circle:nth-child(2) {
+    stroke: #03a9f4;
+    animation: anim2 1s linear forwards;
+
+}
+
+@keyframes anim2 {
+   
+    100% {
+    /* stroke-dashoffset: calc(282 - (282*65) / 100); */
+    stroke-dashoffset: 99;
+
+    
+    }
+}
+
+.chart .percent .tree {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart .percent .tree img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.chart .text {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    padding: .5rem 3rem;
+    border: 2px solid #fe7a5a;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: #fff;
+}
+
+.main {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    font-size: .7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lineBar {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lineBox {
+    padding: 2px;
+    width: 40%;
+    height: 5px;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+}
+
+.line {
+    height: 6px;
+    border-radius: 20px;
+    background-color: #03a9f4;
+    animation: loading 1s forwards cubic-bezier(0,0,0,0);
+
+}
+
+@keyframes loading {
+    0% {width: 0%;}
+    100% {width: 67%;}
+}
+
+.main h1 {
+    display: inline-block;
+    margin: 2rem auto;
+    font-size: 1rem;
+}
+
+.main form {
+    display: inline-block;
+}
+
+.main form div {
+    margin: 0 auto;
+    margin: .8rem 0;
+    display: flex;
+}
+
+.main form div input {
+    cursor: pointer;
+}
+
+.main form label {
+    padding-left: .3rem;
+}
+
+.main form div span {
+    display: inline-block;
+    font-weight: 600;
+    margin-left: auto;
+}
+
+.main a:first-of-type {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.5rem 0;
+    border-top: 1px solid #eaedfa;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+.main a:last-of-type {   
+    background: linear-gradient(to right, #f8937d, #fe9a36);
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    border-radius: 0 0 10px 10px;
+    font-size: .8rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
